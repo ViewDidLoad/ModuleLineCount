@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		B5D65D521E9CB1A90049FE19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D65D511E9CB1A90049FE19 /* ViewController.swift */; };
 		B5D65D541E9CB1A90049FE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D65D531E9CB1A90049FE19 /* Assets.xcassets */; };
 		B5D65D571E9CB1A90049FE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D65D551E9CB1A90049FE19 /* Main.storyboard */; };
+		B5D65D5F1E9CC1430049FE19 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D65D5E1E9CC1430049FE19 /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B5D65D531E9CB1A90049FE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5D65D561E9CB1A90049FE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5D65D581E9CB1A90049FE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D65D5E1E9CC1430049FE19 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				B5D65D4F1E9CB1A90049FE19 /* AppDelegate.swift */,
 				B5D65D511E9CB1A90049FE19 /* ViewController.swift */,
+				B5D65D5E1E9CC1430049FE19 /* extensions.swift */,
 				B5D65D531E9CB1A90049FE19 /* Assets.xcassets */,
 				B5D65D551E9CB1A90049FE19 /* Main.storyboard */,
 				B5D65D581E9CB1A90049FE19 /* Info.plist */,
@@ -93,13 +96,12 @@
 				TargetAttributes = {
 					B5D65D4B1E9CB1A90049FE19 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 7Y5DE47E5W;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = B5D65D471E9CB1A90049FE19 /* Build configuration list for PBXProject "ModuleLineCounter" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -135,6 +137,7 @@
 			files = (
 				B5D65D521E9CB1A90049FE19 /* ViewController.swift in Sources */,
 				B5D65D501E9CB1A90049FE19 /* AppDelegate.swift in Sources */,
+				B5D65D5F1E9CC1430049FE19 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
