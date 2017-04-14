@@ -41,21 +41,24 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
                 chooseDirectoryLabel.stringValue = chooseDir.absoluteString
                 let fileManager = FileManager()
                 files = fileManager.listFiles(path: (dialog.url?.path)!).filter {$0.absoluteString.hasSuffix(".h") || $0.absoluteString.hasSuffix(".m")}//.map {$0.lastPathComponent}
+                var total = 0
                 files.forEach {
                     let item = FileList()
                     item.name = "\($0.lastPathComponent)"
                     do {
                         let data = try String(contentsOf: $0, encoding: .utf8)
                         item.count = data.components(separatedBy: CharacterSet.newlines).count
-                    } catch { print("error") }
+                        total += item.count
+                    } catch { print("file.foreach error: \(error.localizedDescription)") }
                     
                     item.comment = ""
                     fileList.append(item)
                 }
-                //fileList.sort(by: {$0.count! < $1.count!})
                 lineTableView.reloadData()
                 let nameColumn = lineTableView.tableColumns.first
                 nameColumn?.headerCell.stringValue = "파일명 (\(fileList.count)개)"
+                let cntColumn = lineTableView.tableColumns[1]
+                cntColumn.headerCell.stringValue = "\(total) Line"
             }
         }
         
